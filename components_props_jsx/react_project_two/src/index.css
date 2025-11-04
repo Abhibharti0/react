@@ -1,0 +1,15 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border_box;
+  font-family: 'Times New Roman', Times, serif;
+}
+body{
+  height: 100;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(50, 47, 47);
+  color: white;
+  
+}
