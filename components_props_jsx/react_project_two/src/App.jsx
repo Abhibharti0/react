@@ -7,9 +7,9 @@ import './App.css';
 function App() {
   return (
     <div className='container'>
-      <UserCard name="Abhishek Bharti"  desc="desc1" image={img1} />
-      <UserCard name="Satyam Dubey"  desc="desc2" image={img2} />
-      <UserCard name="Aditya kumar" desc="desc3"image={img3} />
+      <UserCard name="Abhishek Bharti"  desc="desc1" image={img1}  style={{ borderRadius: '10px' }}/>
+      <UserCard name="Satyam Dubey"  desc="desc2" image={img2} style={{ borderRadius: '10px' }} />
+      <UserCard name="Aditya kumar" desc="desc3"image={img3} style={{ borderRadius: '10px' }} />
     </div>
   );
 }
