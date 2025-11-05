@@ -8,11 +8,15 @@ function App() {
   //second ->clean-up funtion
   //third ->comma separated dep list
 
-  //variation:1
-  //runs on every render
+   //variation:1
+   //runs on every render
+  // useEffect(()=>{
+  //   alert("i will run on each render")
+  // })
+
+  ////variation 2:that runs on only first render
   useEffect(()=>{
-    alert("i will run on each render")
-  })
+    alert("I will run on only 1st render")},[]); //✅ empty dependency array
 
   function handlerClick(){
     setCount(count+1);
