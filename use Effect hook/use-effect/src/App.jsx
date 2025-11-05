@@ -15,8 +15,14 @@ function App() {
   // })
 
   ////variation 2:that runs on only first render
-  useEffect(()=>{
-    alert("I will run on only 1st render")},[]); //✅ empty dependency array
+  // useEffect(()=>{
+  //   alert("I will run on only 1st render")},[]); //✅ empty dependency array
+
+  //variation 3:Variation 3: Runs only when specific value(s) change
+  useEffect(() => {
+  alert("I will run only when count changes");
+}, [count]); // ✅ dependency array me variable diya
+
 
   function handlerClick(){
     setCount(count+1);
