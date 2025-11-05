@@ -7,11 +7,22 @@ import './App.css';
 function App() {
   const [isLoggedIn, setLoggedIn] = useState(true);
 
-  return(
+  return (
     <div>
-    {isLoggedIn ? <Logoutbtn /> :<Loginbtn />}
+      <h1>Welcome Everyone to Codehelp Web dev Course</h1>
+      <div>
+        {
+          isLoggedIn && <Logoutbtn />
+        }
+      </div>
     </div>
   )
+
+  // return(
+  //   <div>
+  //   {isLoggedIn ? <Logoutbtn /> :<Loginbtn />}
+  //   </div>
+  // )
 
   // if (isLoggedIn) {
   //   return (<Logoutbtn />)
