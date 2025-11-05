@@ -9,11 +9,26 @@ function App() {
   function handleMouseOver(){
     alert("Para k uper mouse gya hai n")
   }
+  function handlerinputchange(e){
+    console.log("value till now:",e.target.value)
+  }
+  function handlersubmit(e){
+    e.preventDefault()
+    alert("do you want to submit the form")
+  }
+  
 
   return (
-    <div><p onMouseOver={handleMouseOver}>i am para</p>
+    <div>
+
+      <form  onSubmit={handlersubmit}>
+        <input type="text" onChange={handlerinputchange} />
+        <button type='submit'>Submit</button>
+      </form>
+      
+      {/* <p onMouseOver={handleMouseOver}>i am para</p>
     
-    <button onClick={handleClick}>click me</button>
+    <button onClick={handleClick}>click me</button> */}
     </div>
   )
 }
