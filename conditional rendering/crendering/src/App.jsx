@@ -7,11 +7,17 @@ import './App.css';
 function App() {
   const [isLoggedIn, setLoggedIn] = useState(true);
 
-  if (isLoggedIn) {
-    return (<Logoutbtn />)
-  } else {
-    return (<Loginbtn />)
-  }
+  return(
+    <div>
+    {isLoggedIn ? <Logoutbtn /> :<Loginbtn />}
+    </div>
+  )
+
+  // if (isLoggedIn) {
+  //   return (<Logoutbtn />)
+  // } else {
+  //   return (<Loginbtn />)
+  // }
 }
 
 export default App;
