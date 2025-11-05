@@ -1,19 +1,20 @@
+import { useState } from 'react'
 import './App.css'
+import Button from './components/Button'
 import Card from './components/Card'
 
+
 function App() {
- 
+    const[count,setCount]=useState(0)
+
+    function handlerClick(){
+      setCount(count+1);
+    }
 
   return (
     <div>
-        <Card name="Abhishek Bharti">
-        <h1>Best Web Dev Course</h1>
-        <p>Trying to be Consistent in this</p>
-        <p>will complete the course sonn</p>
-      </Card>
-      <Card children="main ek children hu ">
-        main nhi rhunga to  Card pass wala children display hoga
-      </Card>
+       <Button handlerClick={handlerClick} text="click me " ><h1>{count}</h1></Button>
+
     </div>
   )
 }
