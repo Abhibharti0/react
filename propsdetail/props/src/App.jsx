@@ -11,6 +11,9 @@ function App() {
         <p>Trying to be Consistent in this</p>
         <p>will complete the course sonn</p>
       </Card>
+      <Card children="main ek children hu ">
+        main nhi rhunga to  Card pass wala children display hoga
+      </Card>
     </div>
   )
 }
