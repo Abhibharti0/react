@@ -20,11 +20,14 @@ function App() {
 
   return (
     <div>
+        
+        {/* immediate invocation=An IIFE (Immediately Invoked Function Expression) is a function that runs immediately after it is defined. */}
+        <button onClick={alert("Button clicked")}>Click me</button>
 
-      <form  onSubmit={handlersubmit}>
+      {/* <form  onSubmit={handlersubmit}>
         <input type="text" onChange={handlerinputchange} />
         <button type='submit'>Submit</button>
-      </form>
+      </form> */}
       
       {/* <p onMouseOver={handleMouseOver}>i am para</p>
     
