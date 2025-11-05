@@ -22,7 +22,7 @@ function App() {
     <div>
         
         {/* immediate invocation=An IIFE (Immediately Invoked Function Expression) is a function that runs immediately after it is defined. */}
-        <button onClick={alert("Button clicked")}>Click me</button>
+        <button onClick={()=>alert("Button clicked")}>Click me</button>
 
       {/* <form  onSubmit={handlersubmit}>
         <input type="text" onChange={handlerinputchange} />
