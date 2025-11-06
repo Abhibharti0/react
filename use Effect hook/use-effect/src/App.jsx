@@ -9,7 +9,7 @@ function App() {
   //second ->clean-up funtion
   //third ->comma separated dep list
 
-  
+
 
    //variation:1
    //runs on every render
@@ -33,8 +33,19 @@ function App() {
 
 
 
-  //variation 4:Runs  when any value(s) change -multiple dependency
-  useEffect(()=>{alert("I will run every time when count/total is update")},[count,total])
+  // //variation 4:Runs  when any value(s) change -multiple dependency
+  // useEffect(()=>{alert("I will run every time when count/total is update")},[count,total])
+
+
+
+    //variation 5: add a cleanup funtion
+   useEffect(()=>{
+    alert("count is updated")
+
+    return()=>{
+      alert("count is unmount from UI")
+    }
+   },[count])
 
 
   function handlerClick(){
@@ -43,6 +54,7 @@ function App() {
   function handlerClickTotal(){
     setTotal(total+1);
   }
+
 
   return (
     <div>
