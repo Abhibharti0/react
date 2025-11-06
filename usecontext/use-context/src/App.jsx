@@ -4,23 +4,31 @@ import './App.css'
 import ChildA from './components/ChildA';
 
 //step 1:create context
-const UserContext=createContext();
+// const UserContext=createContext();
 
 //step 2:wrap all the child inside a provider
 //step 3:pass value
 //step 4:consumer k ander jaake consume karlo
 
-
+  const themeContext =createContext();
 
 function App() {
-  const [user,setUser]=useState({name:"Abhishek"})
+  // const [user,setUser]=useState({name:"Abhishek"})
+
+  const [theme ,setTheme]=useState('light');
 
   return (
-    <UserContext.Provider value={{ user, setUser }}>
-    <ChildA />
-   </UserContext.Provider>
+
+    <themeContext.Provider value={{theme,setTheme}}>
+      <div id='container' style={{backgroundColor:theme==='light'?"beige":"black"}}><ChildA /></div>
+      </themeContext.Provider>
+
+  //   <UserContext.Provider value={{ user, setUser }}>
+  //   <ChildA />
+  //  </UserContext.Provider>
   )
 }
 
 export default App
-export {UserContext}
+// export {UserContext}
+export {themeContext}
