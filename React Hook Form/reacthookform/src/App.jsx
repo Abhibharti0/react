@@ -5,12 +5,14 @@ function App() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors ,isSubmitting},
   } = useForm();
 
   // Form submit hone par chalega
-  const onSubmit = (data) => {
-    console.log("Form Data:", data);
+  async function onSubmit(data) {
+    //Api call ko samulate krte hain
+    await new Promise((resolve)=>setTimeout(resolve,5000))
+      console.log("Form Data:", data);
   };
 
   return (
@@ -88,7 +90,10 @@ function App() {
         )}
       </div>
 
-      <button type="submit">Submit</button>
+      <button type="submit" disabled={isSubmitting}>
+  {isSubmitting ? "Submitting..." : "Submit"}
+</button>
+
     </form>
   );
 }
