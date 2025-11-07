@@ -12,3 +12,7 @@ React Hook Form ek lightweight library hai jo aapko forms banane aur validate ka
 4.🔄 Integration — Yup, Zod, Joi jaise schema validation libraries ke sath easily integrate hota hai.
 
 5.🪶 Lightweight — Bundle size bahut chhota hai (~9KB gzipped).
+
+
+
+To install React Hook Form= "npm install react-hook-form"
