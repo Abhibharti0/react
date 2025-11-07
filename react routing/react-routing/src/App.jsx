@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
 import Dashboard from './components/Dashboard';
+import ParamComp from './components/ParamComp';
 const router =createBrowserRouter(
 [
   {path:"/",
@@ -17,6 +18,13 @@ const router =createBrowserRouter(
   {
     path:"/dashboard",
     element: <div><Navbar /><Dashboard/></div> 
+  },
+
+  {
+    path:"/params/:id",
+    element: <div>
+      <Navbar />
+      <ParamComp/></div> 
   },
 ]
 );
