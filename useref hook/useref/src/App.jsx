@@ -5,6 +5,8 @@ function App() {
   const [count, setCount] = useState(0);
   const val = useRef(0); // useRef declared properly
 
+  let btnRef=useRef();
+
   function handleIncrement() {
     val.current = val.current + 1;
     console.log("value of val:", val.current);
@@ -16,9 +18,18 @@ function App() {
     console.log("Main fir se render ho gaya hu");
   });
 
+  function changeColor(){
+    btnRef.current.style.background="red"
+  }
+
   return (
     <div>
-      <button onClick={handleIncrement}>Increment</button>
+      <button ref={btnRef} onClick={handleIncrement}>Increment</button>
+
+      <br />
+      <br />
+      <button onClick={changeColor}>Change Color of 1st Button</button>
+      <br />
       <br />
       <div>Count: {count}</div>
     </div>
