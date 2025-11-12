@@ -1,0 +1,68 @@
+/* App.css */
+
+/* General app container */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8fafc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Counter box styling */
+div {
+  background-color: #ffffff;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Count text */
+p {
+  font-size: 2rem;
+  margin: 1.5rem 0;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Buttons styling */
+button {
+  font-size: 1.25rem;
+  padding: 0.6rem 1.2rem;
+  margin: 0.4rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Specific button colors */
+button:nth-child(1) {
+  background-color: #4caf50;
+  color: white;
+}
+
+button:nth-child(3) {
+  background-color: #f44336;
+  color: white;
+}
+
+button:nth-child(4) {
+  background-color: #2196f3;
+  color: white;
+}
+
+/* Hover effect */
+button:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+}
+
+/* Focus outline for accessibility */
+button:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 3px;
+}
