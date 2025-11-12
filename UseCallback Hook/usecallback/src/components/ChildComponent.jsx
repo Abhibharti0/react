@@ -1,17 +1,12 @@
 import React from 'react'
 
-const ChildComponent = (props) => {
-  console.log("Child Component go re-render")
+const ChildComponent = React.memo(({ buttonName, onClick }) => {
+  console.log("Child Component re-render")
   return (
     <div>
-      <button>
-        {
-          props.buttonName
-        }
-      </button>
-      
+      <button onClick={onClick}>{buttonName}</button>
     </div>
   )
-}
+})
 
 export default ChildComponent
