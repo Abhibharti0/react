@@ -1,37 +1,34 @@
-import { useEffect, useState, useRef } from 'react';
-import './App.css';
+import { useState, useRef } from "react";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-  const val = useRef(0); // useRef declared properly
+   const [time, setTime] = useState(0);
+  const timerRef = useRef(null);
 
-  let btnRef=useRef();
-
-  function handleIncrement() {
-    val.current = val.current + 1;
-    console.log("value of val:", val.current);
-    setCount(count + 1);
+  function startTimer() {
+    // directly start interval (no condition check)
+    timerRef.current = setInterval(() => {
+      setTime(time => time + 1);
+    }, 1000);
   }
 
-  // Runs on every render (since no dependency array)
-  useEffect(() => {
-    console.log("Main fir se render ho gaya hu");
-  });
-
-  function changeColor(){
-    btnRef.current.style.background="red"
+  function stopTimer() {
+    clearInterval(timerRef.current);
+    timerRef.current=null
   }
 
+  function resetTimer() {
+    clearInterval(timerRef.current);
+    setTime(0);
+  }
   return (
-    <div>
-      <button ref={btnRef} onClick={handleIncrement}>Increment</button>
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <h2>⏱️ Stopwatch using useRef</h2>
+      <h1>{time}s</h1>
 
-      <br />
-      <br />
-      <button onClick={changeColor}>Change Color of 1st Button</button>
-      <br />
-      <br />
-      <div>Count: {count}</div>
+      <button onClick={startTimer}>Start</button>
+      <button onClick={stopTimer}>Stop</button>
+      <button onClick={resetTimer}>Reset</button>
     </div>
   );
 }
