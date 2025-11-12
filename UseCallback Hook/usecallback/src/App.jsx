@@ -9,7 +9,7 @@ function App() {
   // useCallback ensures the function reference doesn't change on every render
   const handleClick = useCallback(() => {
     setCount(prevCount => prevCount + 1)
-  }, [count])
+  }, [])
 
   return (
     <div>
